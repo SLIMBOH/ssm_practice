@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+
+    <!--configuration of mapper.xml-->
+    <!--under score(java) camel case(database)-->
+    <settings>
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+    </settings>
+
+    <!--short name-->
+    <typeAliases>
+        <package name="com.suhao.crud.pojo"/>
+    </typeAliases>
+
+    <!--pageInfo plugin-->
+    <plugins>
+        <plugin interceptor="com.github.pagehelper.PageInterceptor"></plugin>
+    </plugins>
+
+    <!--locator of mapper interface-->
+    <mappers>
+        <mapper class="com.suhao.crud.dao.EmployeeMapper"/>
+        <mapper class="com.suhao.crud.dao.DepartmentMapper"/>
+    </mappers>
+
+</configuration>

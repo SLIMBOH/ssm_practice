@@ -1,0 +1,27 @@
+<!DOCTYPE generatorConfiguration PUBLIC
+        "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+
+    <context id="simple" targetRuntime="MyBatis3Simple">
+
+        <commentGenerator>
+            <property name="suppressAllComments" value="true"/>
+        </commentGenerator>
+
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/ssm_crud_db?useUnicode=true"
+                        userId="root"
+                        password="fuckyoumysql"/>
+
+        <javaModelGenerator targetPackage="com.suhao.crud.pojo" targetProject="./src/main/java"/>
+
+        <sqlMapGenerator targetPackage="mappers" targetProject="./src/main/resources"/>
+
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.suhao.crud.dao" targetProject="./src/main/java"/>
+
+        <table tableName="emp_tb" domainObjectName="Employee"/>
+        <table tableName="dept_tb" domainObjectName="Department"/>
+    </context>
+
+</generatorConfiguration>
