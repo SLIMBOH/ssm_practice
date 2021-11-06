@@ -6,12 +6,11 @@
     <properties resource="database.properties"/>
 
     <typeAliases>
-        <package name="com.suhao.pojo"/>
+        <package name="com.suhao.crud.pojo"/>
     </typeAliases>
 
     <mappers>
-        <mapper class="com.suhao.dao.BookMapper"/>
-        <mapper resource="com/suhao/dao/BookMapper.xml"/>
+        <mapper class="com.suhao.crud.dao.BookMapper"/>
     </mappers>
 
 </configuration>

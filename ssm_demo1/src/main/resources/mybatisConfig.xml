@@ -11,7 +11,6 @@
 
     <mappers>
         <mapper class="com.suhao.crud.dao.BookMapper"/>
-        <mapper resource="com/suhao/dao/BookMapper.xml"/>
     </mappers>
 
 </configuration>
